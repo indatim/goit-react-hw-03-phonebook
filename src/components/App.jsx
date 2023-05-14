@@ -4,6 +4,8 @@ import { Report } from 'notiflix/build/notiflix-report-aio';
 
 import { Container, PhonebookHeader, ContactsHeader } from './App.styled';
 
+import { FaPhoneSquareAlt , FaUser } from "react-icons/fa";
+
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
 import Filter from 'components/ContactFilter/ContactFilter';
@@ -87,9 +89,9 @@ class App extends Component {
 
     return (
       <Container>
-        <PhonebookHeader>Phonebook</PhonebookHeader>
+        <PhonebookHeader><FaPhoneSquareAlt style={{marginRight: '5'}}/> Phonebook</PhonebookHeader>
         <ContactForm onSubmit={this.addContact} />
-        <ContactsHeader>Contacts</ContactsHeader>
+        <ContactsHeader><FaUser style={{marginRight: '5'}}/>Contacts</ContactsHeader>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           contacts={contactsFromData}

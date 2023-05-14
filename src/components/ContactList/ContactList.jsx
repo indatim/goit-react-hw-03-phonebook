@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { FaTimesCircle } from 'react-icons/fa';
+
 import {
   ContactListContainer,
   ContactListItem,
@@ -14,7 +17,9 @@ const ContactList = ({ contacts, onDeleteContact }) => (
         <ContactListText>{name}:</ContactListText>
         <ContactListText>{number}</ContactListText>
         <ContactListButton type="button" onClick={() => onDeleteContact(id)}>
-          Delete
+          <FaTimesCircle
+            style={{color: 'red', marginRight: '5'}}
+          /> Delete
         </ContactListButton>
       </ContactListItem>
     ))}

@@ -22,10 +22,12 @@ export const ContactListText = styled.span`
 
 export const ContactListButton = styled.button`
   padding: 5px;
+  display: inline-flex;
   font-size: 14px;
   text-transform: capitalize;
   border: none;
   border-radius: 5px;
+  align-items: center;
 
   &:hover,
   &:focus {
